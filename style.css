@@ -1,0 +1,328 @@
+/* **************************************** PARTIE I: SCREEN DESTOP ********************************************* */
+
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+ /* Proprietes: Passage automatique de "Nous contacter" au "Formulaire de contact" */
+    html{
+        scroll-behavior: smooth;
+
+    }
+
+    body{
+        font-family: 'Advent Pro', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    li{
+        list-style-type: none;
+    }
+
+    h2{
+        text-transform: uppercase;     /* Mets tous les titres h2 en Majuscule */
+        text-align: center;
+        padding-top: 30px;
+        font-size: 2em;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+ /* Changer de couleur au survol de la souris sur les options du menu */
+    header a:hover{
+        color: azure;
+        transition: 1s;
+    }
+
+    /* ============================================================================================================== */
+    /* ***************************************************************************************************************/
+
+    /* Propriete barre de menu horizontale */
+    nav {
+        overflow: hidden;
+        background-color: #ED7B08;
+        position: fixed;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    /* Proprietes des options de la barre de menu  horizontale */
+
+    header li {
+        float: right;      /* Floter (aligner) a droite */
+        font-size: 1.2em;
+    }
+
+    header li a {
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        padding: 18px 16px;   /* En Haut et Bas = 18px et Gauche et Droite = 16px */
+    }
+
+    /* Proprietes du logo: Nom INNOV GIS */
+    #logo {
+        font-family: 'Dancing Script';
+        font-weight: bold;
+        float: left;
+    }
+
+    /* ============================================================================================================== */
+    /* ************************************************* IMAGE PRINCIPALE ******************************************* */
+
+    #imagePrincipale {
+        padding-top: 60px;
+        background: url(Media/SpaceX.jpg) no-repeat fixed 50% 50%;
+        background-size: cover;
+        height: 799px;    /* Hauteur de l'image principale */
+    }
+
+    /* Stylisatioin du h1 */
+    h1 {
+        font-family: 'sans serif';
+        text-align: center;
+        color: rgb(240, 83, 31);
+        font-size: 6em;
+        margin-top: 40px;
+        text-shadow: 1px 3px 2px black;   /* Ajoute une ombre autour de chaque lettre */
+    }
+
+    /* Parametres du premier trait */
+    #premierTrait {
+        height: 3px;
+        width: 25%;
+        margin: 50px auto;
+        background-color: #e16b04;
+    }
+
+    /* Proprietes du h3 */
+    h3 {
+        text-align: center;
+        color: rgb(8, 223, 205);
+        font-size: 3em;
+        text-shadow: 1px 3px 2px black;   /* Ajoute une ombre autour de chaque lettre */
+    }
+
+    /* ============================================================================================================== */
+    /* *************************************************** PRESENTATION ********************************************* */
+    /* Pensons Intelligence Géospatiale */
+    #presentation h5{
+        text-align: center;
+        color: #992903d8;
+        font-size: larger; 
+    }
+    /* Faire defiler le texte */
+    /* Proprietes: Notre slogan (texte defilant) */
+    #presentation h5{
+        animation-name: h5;                          /* nom de reference a la regle @keyframes mise en oeuvre */
+        animation-duration: 15s;                    /* Valeur a ajuster suivant la longueur du message */
+        animation-iteration-count: infinite;        /* Boucle continue */
+        animation-timing-function: linear;       
+    }
+    @keyframes h5{
+            0%{
+            transform: translate3d(0,0,0);              /* Position initiale a droite */
+        }
+            100%{
+            transform: translate3d(-100%,0,0);          /* Position finale à droite */
+        }
+    }
+
+    /* ***************** */
+
+    #presentation {
+        background-color: #FFFAE1;
+        padding: 10px 0px 100px 0;
+    }
+
+    #texteIntro {
+        padding: 0px 20px;
+    }
+
+    #prestations {
+        display: flex;            /* Aligne horizontalement les elements */
+        flex-wrap: wrap;
+        justify-content: space-between;   /* Espace les elements */
+        padding: 30px 10%;
+    }
+
+    /* Gestion des titres des images */
+    .imagesPrestations h4 {
+        font-family: 'Dancing Script';
+        text-align: center;
+        font-size: 1.8em;
+        margin: 15px;
+        font-weight: 300;
+    }
+
+    /* Gestion images */
+    .imagesPrestations img {
+        border-radius: 10px;    /* Arrondir les bordures des images */
+        box-shadow: 5px 8px 5px 4px rgb(0, 0, 0, 0.83);
+    }
+
+    /* Mettre les images en mouvement au survol de la souris */
+    .imagesPrestations img:hover{
+        opacity: 0.5;
+        transform: scale(1.05);
+        transition: 0.6s ease-in-out;
+    }
+
+    /* ============================================================================================================= */
+    /* ************************************** SCIENCES SPATIALES A VOTRE PORTEE *********************************** */
+    #tourisme {
+        height: 1400px;
+        background-color: #f1f2f6;
+        padding: 1px 2%;
+    }
+
+    #tourisme h2{
+        padding-top: 60px;
+    }
+
+    /* Inserons nos images */
+    #technologie{
+        background: url(Media/Tech.jpg) no-repeat;
+    }
+    #innovation {
+        background: url(Media/innova4.jpg) no-repeat;
+    }
+    #plan {
+        background: url(Media/concept.jpg) no-repeat;
+    }
+    #data {
+        background: url(Media/Data.jpg) no-repeat;
+    }
+
+    /* Tailles des images */
+    #tourisme li {
+        margin: 65px 100px 0 100px;
+        height: 180px;
+        width: 60%;
+        max-width: 550px;
+        float: left;
+        box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75) ;
+    }
+
+    #tourisme p {
+        height: 45px;
+        width: 235px;
+        background-color: #227e52;
+        float: right;
+        margin: 50px -180px 0 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 15px;
+        box-shadow: 4px 4px 0 1px rgb(104, 108, 101);
+    }
+
+    /* Decallage de certaines images en termes de dispositions */
+    #tourisme #innovation, #tourisme #data {
+        float: right;
+    }
+    /* Proprietes des vignettes des images */
+    #innovation p, #data p {
+        float: left;
+        background-color: cyan;
+        margin-left: -180px;
+        box-shadow: -4px 4px 0 1px rgba(15, 154, 156, 1);
+    }
+
+    /* ============================================================================================================= */
+    /* ********************************************************* FOOTER ******************************************* */
+    /* Proprietes du footer: Pied de page */
+    footer{
+        background-color: #0f1134;
+        color: #FFFAE1;
+        padding: 20px 0 10px 0;
+        text-align: center;
+    }
+    /* Proprietes du formulaires */
+    form {
+        margin: 0 auto;
+        max-width: 900px;
+    }
+    /* Proprietes groupées: Bouton, Zones de saisies de nom et Email et zone du message */
+    input, textarea, button {
+        border: none;
+        width: 55%;
+        padding: 15px 10px;
+        margin: 1px 0;
+        font-size: 1.2em;
+        font-family: 'Advent Pro', sans-serif;
+        border-radius: 8px;
+    }
+    /* Proprietes: Zones de saisie de messages a envoyer */
+    textarea{
+        height: 120px;
+    }
+    /* Proprietes du bouton "Envoyer" */
+    button{
+        font-size: 1.5em;
+        background-color: #FFFAE1;
+    }
+    /* Proprietes: Changer de couleur au survol de la souris sur le bouton "Envoyer" */
+    button:hover{
+        background-color: #e55039;
+        color: #FFFAE1;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    /* Proprietes 2e traits */
+    #deuxiemeTrait{
+        height: 1px;
+        width: 75%;
+        background-color: #FFFAE1;
+        margin: 60px auto;
+    }
+
+    #copyrightEtIcons{
+        display: flex;
+        margin-bottom: 20px;
+        padding: 0 10%;
+    }
+    #copyright{
+        width: 50%;
+        text-align: left;
+        color: #FFFAE1;
+    }
+    /* Proprietes gruopées des icons */
+    #icons{
+        width: 50%;
+        text-align: right;
+    }
+    /* Proprietes individuelles des icons */
+    #icons a{
+        display: inline-block;
+        padding: 0 15px;
+        font-size: 1.3em;
+        color: #FFFAE1;
+    }
+    /* Proprietes: Faire grossir les icons au survol de la souris */
+    #icons a :hover{
+        transform: scale(1.5);
+        transition: 0.1s;
+    }
+
+    /* Proprietes logo INNOV GIS */
+    #gis img{
+        height: 100px;
+    } 
+
+
+
+
+
+
+
+
+
+
+

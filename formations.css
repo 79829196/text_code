@@ -1,0 +1,274 @@
+
+/* ************************************** PARTIE I: GESTION ACCUEIL DE LA PAGE ********************************* */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+/* Proprietes: Passage automatique de "Nous contacter" au "Formulaire de contact" */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Proprietes de la principale devrant contenir l'ensemble des autres */
+body{
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Propriete barre de menu horizontale */
+nav {
+    overflow: hidden;
+    background-color: #ED7B08;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* Stylisatioin du h1 */
+#imagePrincipale h1 {
+    font-family: 'sans serif';
+    text-align: center;
+    color: rgb(240, 83, 31);
+    font-size: 6em;
+    margin-top: 40px;
+    text-shadow: 1px 3px 2px black;   /* Ajoute une ombre autour de chaque lettre */
+}
+
+#imagePrincipale {
+    padding-top: 60px;
+    background: url(Media/formation4.avif) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 799px;    /* Hauteur de l'image principale */
+}
+
+/* Parametres du premier trait */
+#premierTrait {
+    height: 3px;
+    width: 25%;
+    margin: 50px auto;
+    background-color: #e16b04;
+}
+
+/* Proprietes du h3 */
+h3 {
+    text-align: center;
+    color: rgb(8, 223, 205);
+    font-size: 3em;
+    text-shadow: 1px 3px 2px black;   /* Ajoute une ombre autour de chaque lettre */
+}
+
+/* ******************************* */
+header li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;   /* En Haut et Bas = 18px et Gauche et Droite = 16px */
+}
+/* Suppression des points des options */
+li{
+    list-style-type: none;
+}
+/* Supprimes les traits en dessous des lien cliquables et definir la couleur du texte */
+a{
+    text-decoration: none;
+    color: black;
+}
+/* Alignement des options sur la barre de menu horizontale et definir la taille */
+header li {
+    float: right;      /* Floter (aligner) a droite */
+    font-size: 1.2em;
+}
+
+/* Proprietes: "Accueil" nom sur la barre horizontale "Accueil" */
+#accueil {
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+}
+
+/* Proprietes: "logo" nom sur la barre horizontale "INNOV GIS" */
+#logo{
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    float: left;
+}
+
+/* Stylisatioin de tous les h1 */
+h1 {
+    font-family: 'sans serif';
+    text-align: center;
+    color: rgb(240, 83, 31);
+    font-size: 2em;
+    margin-top: 40px;
+    text-shadow: 1px 3px 2px black;   /* Ajoute une ombre autour de chaque lettre */
+}
+
+/* ******************************************** PARTIE II: NOS FORMATIONS ************************************** */
+/* Slogan de formation */
+#slogan p{
+    text-align: right;
+    font-size: 2em;
+    color: #e55039;
+    text-shadow: 1px 3px 2px black;
+}
+
+/* Proprietes: Notre slogan (texte defilant) */
+#slogan p{
+    animation-name: p;                          /* nom de reference a la regle @keyframes mise en oeuvre */
+    animation-duration: 15s;                    /* Valeur a ajuster suivant la longueur du message */
+    animation-iteration-count: infinite;        /* Boucle continue */
+    animation-timing-function: linear;       
+}
+@keyframes p{
+    0%{
+        transform: translate3d(0,0,0);              /* Position initiale a droite */
+    }
+    100%{
+        transform: translate3d(-100%,0,0);          /* Position finale à droite */
+    }
+}
+
+/* *************************** Parametres des traits separant les formations et images ************************** */
+#Trait {
+    height: 1px;                    /* Epaisseurs des traits */
+    width: 70%;                      /* Longueurs des traits */
+    margin: 50px auto;          
+    background-color: #e16b04;           /* Couleurs des traits */
+}
+
+/* Gestion images */
+ img {
+    border-radius: 10px;    /* Arrondir les bordures des images */
+    box-shadow: 5px 8px 5px 4px rgb(0, 0, 0, 0.83);
+    margin: 1px 160px;
+    cursor: pointer;
+}
+/* Mettre les images en mouvement au survol de la souris */
+ img:hover{
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+
+/* *************************************** Proprrietes titres des formations ************************************ */
+#formation h2{
+    text-align: center;
+    color: #080d4f; 
+}
+
+/* ************************************ Proprietes des infos sur les formations ********************************* */
+/*====> Formation Spatial Statistic */
+
+#stat_space p{
+    margin-left: 500px;
+    margin-right: 10px;
+   background-color: #e16b04;
+   text-align: center;
+   font-weight: 100;
+   font-size: 20px;
+  
+}
+
+
+/*====> Spatial Big  Data */
+#formation #bigdata p{
+    text-align: center;
+    padding-left: 500px;
+   margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************************** PARTIE III: FOOTER ******************************************* */
+
+/* Proprietes du footer: Pied de page */
+footer{
+    background-color: #0f1134;
+    color: #FFFAE1;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+/* Proprietes du formulaires */
+form {
+    margin: 0 auto;
+    max-width: 900px;
+}
+/* Proprietes groupées: Bouton, Zones de saisies de nom et Email et zone du message */
+input, textarea, button {
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0;
+    font-size: 1.2em;
+    font-family: 'Advent Pro', sans-serif;
+    border-radius: 8px;
+}
+/* Proprietes: Zones de saisie de messages a envoyer */
+textarea{
+    height: 120px;
+}
+/* Proprietes du bouton "Envoyer" */
+button{
+    font-size: 1.5em;
+    background-color: #FFFAE1;
+}
+/* Proprietes: Changer de couleur au survol de la souris sur le bouton "Envoyer" */
+button:hover{
+    background-color: #e55039;
+    color: #FFFAE1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+/* Proprietes 2e traits */
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%;
+    background-color: #FFFAE1;
+    margin: 60px auto;
+}
+
+#copyrightEtIcons{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+#copyright{
+    width: 50%;
+    text-align: left;
+    color: #FFFAE1;
+}
+/* Proprietes gruopées des icons */
+#icons{
+    width: 50%;
+    text-align: right;
+}
+/* Proprietes individuelles des icons */
+#icons a{
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 1.3em;
+    color: #FFFAE1;
+}
+/* Proprietes: Faire grossir les icons au survol de la souris */
+#icons a :hover{
+    transform: scale(1.5);
+    transition: 0.1s;
+}
+
+/* Proprietes logo INNOV GIS */
+#gis img{
+    height: 100px;
+}
